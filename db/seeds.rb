@@ -19,7 +19,7 @@ Baby.create(name: "Humphrey the Camel", release_year: 1995, poem: "Humphrey is m
 
 
 10.times do 
-User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, password: "abc123")
+User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, user_name: Faker::TvShows::HeyArnold.character, password: "abc123")
 end
 
 puts "Seeding Complete"

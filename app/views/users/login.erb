@@ -1,0 +1,13 @@
+<h1>User Login</h1>
+
+<% if @error %>
+    <p><%= @error %></p>
+<% end %>
+
+<%= form_tag '/send_form_here' do %>
+<%= label_tag "Username" %>
+<%= text_field_tag :user_name %>
+<%= label_tag :password %>
+<%= password_field_tag :password %>
+<%= submit_tag "Login" %>
+<% end %>
