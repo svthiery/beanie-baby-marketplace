@@ -1,0 +1,10 @@
+<h1>Add New Beanie Baby to Collection</h1>
+
+<%= form_for @ownership do |f| %>
+<%= f.label "Owner name" %>
+<%= f.collection_select(:user_id, User.all, :id, :name) %>
+
+<%= f.label "Beanie Baby" %>
+<%= f.collection_select(:baby_id, Baby.all, :id, :name) %>
+<%= f.submit %>
+<% end %>

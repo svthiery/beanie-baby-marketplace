@@ -1,0 +1,15 @@
+
+
+<h1>Behold the babies!</h1>
+<br>
+<ul>
+<% @babies.each do |b| %>
+<img src=<%= b.img_url %>>
+<li><%=link_to b.name, baby_path(b) %></li>
+<li><%= b.release_year %></li>
+<li><%= b.species %></li>
+<li><%= b.msrp %></li>
+<li><%= b.poem %></li>
+<br>
+<% end %>
+</ul>
