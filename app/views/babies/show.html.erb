@@ -6,4 +6,9 @@
 <li>$<%= @baby.msrp %></li>
 </ul>
 
+
+<% flash[:baby] = @baby %>
+<%= link_to 'Trade for this Baby!', new_trade_path(@baby) %>
+
+
 <blockquote><%= @baby.poem %></blockquote>

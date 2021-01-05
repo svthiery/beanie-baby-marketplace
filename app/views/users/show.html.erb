@@ -4,7 +4,10 @@
 <p>Age: <%= @user.age %></p>
 <p>Location: <%= @user.location %></p>
 <p>Favorite baby: <%= @user.favorite_baby %></p>
-<p>All babies: <% @user.babies.each do |baby| %></p>
-<%= baby.name %>
+<p>All babies: <% @user.ownerships.each do |ownership| %></p>
+<%= ownership.baby.name %>
+
+
 <% end %>
 
+<%= link_to 'Add Beanie Baby', new_ownership_path %>

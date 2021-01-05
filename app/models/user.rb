@@ -1,4 +1,9 @@
 class User < ApplicationRecord
+    has_many :trades
+    has_many :traders, foreign_key: :trader_id, class_name: "Trade"
+    has_many :tradees, through: :traders
+    has_many :tradees, foreign_key: :tradee_id, class_name: "Trade"
+    has_many :traders, through: :tradees
     has_many :ownerships
     has_many :babies, through: :ownerships
     has_secure_password

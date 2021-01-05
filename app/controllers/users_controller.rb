@@ -9,6 +9,10 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
+    def create_trade(arg)
+        
+    end
+
     def login
         
         @error = flash[:error]

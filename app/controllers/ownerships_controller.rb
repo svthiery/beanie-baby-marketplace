@@ -5,7 +5,7 @@ class OwnershipsController < ApplicationController
     end
 
     def create
-        a = Ownership.create(ownership_params)
+        a = Ownership.create(baby_id: baby_params[:baby_id], user_id: @current_user.id)
         redirect_to user_path(a.user_id)
     end
 
@@ -17,8 +17,8 @@ class OwnershipsController < ApplicationController
 
     private
 
-    def ownership_params
-        params.require(:ownership).permit(:user_id, :baby_id)
+    def baby_params
+        params.require(:ownership).permit(:baby_id)
     end
 
 
