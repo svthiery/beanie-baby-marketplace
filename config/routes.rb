@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   post '/ownership/:id/trades/new', to: 'trades#create'
   get '/trades/:id', to: 'trades#show', as: 'trade'
   post '/trades/:id', to: 'trades#trade', as: 'confirm_trade'
-
+  patch '/trades/:id/cancel', to: 'trades#cancel', as: 'cancel_trade'
+  get '/trades/:id/cancel', to: 'trades#cancel', as: 'cancel_confirmed'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

@@ -12,12 +12,16 @@ class TradesController < ApplicationController
     end
 
   def show
-    
-        trade = Trade.find(params[:id])
+        @trade = Trade.find(params[:id])
 
-        @self_ownership = Ownership.find(trade.g_ownership_id)
-        @foreign_ownership = Ownership.find(trade.d_ownership_id)
-  
+        @self_ownership = Ownership.find(@trade.g_ownership_id)
+        @foreign_ownership = Ownership.find(@trade.d_ownership_id)
+        byebug
+  end
+
+  def cancel
+    @trade = Trade.find(params[:id])
+    @trade.update(status: "cancelled")
   end
     
   def trade
@@ -30,7 +34,7 @@ class TradesController < ApplicationController
 
     def create
         
-        trade = Trade.create(g_ownership_id: given_params[:g_ownership_id], d_ownership_id: params[:id])
+        trade = Trade.create(g_ownership_id: given_params[:g_ownership_id], d_ownership_id: params[:id], status: "pending")
         redirect_to trade_path(trade)
     end
 
@@ -42,7 +46,6 @@ class TradesController < ApplicationController
         for_id = for_ownership.user_id
         self_ownership.update(user_id: for_id)
         for_ownership.update(user_id: self_id)
-        byebug
     end
 
     def given_params

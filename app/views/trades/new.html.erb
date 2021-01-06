@@ -2,5 +2,5 @@
 
 <%= form_for :trade do |f| %>
 <%= f.collection_select(:g_ownership_id, @babies, :id, :name ) %>
-<%= f.submit %>
+<%= f.submit "Propose Trade" %>
 <% end %>

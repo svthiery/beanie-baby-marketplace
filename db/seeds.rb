@@ -82,7 +82,7 @@ But he’s not here to scare anyone
 He wants to have some Halloween fun!', img_url: 'https://beaniepedia.com/beanies/files/2015/10/quivers-1.jpg')
 
 10.times do 
-    User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, user_name: Faker::TvShows::HeyArnold.character, password: "abc123")
+    User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, user_name: Faker::Creature::Dog.name, password: "abc123")
     end
 
 puts "Seeding Complete"

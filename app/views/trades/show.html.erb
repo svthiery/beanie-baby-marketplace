@@ -5,6 +5,8 @@
 
 <%= @foreign_ownership.baby.name %>
 
-
+<% if @trade.d_ownership.user.id == @current_user.id %> 
 <%= button_to 'Confirm Trade', confirm_trade_path %>
+<% end %>
+<%= button_to 'Cancel Trade', cancel_trade_path, method: :patch %>
 
