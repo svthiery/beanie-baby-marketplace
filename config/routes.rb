@@ -10,6 +10,7 @@ Rails.application.routes.draw do
   get '/ownership/:id/trades/new', to: 'trades#new', as: 'noo_trade'
   post '/ownership/:id/trades/new', to: 'trades#create'
   get '/trades/:id', to: 'trades#show', as: 'trade'
+  post '/trades/:id', to: 'trades#trade', as: 'confirm_trade'
 
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

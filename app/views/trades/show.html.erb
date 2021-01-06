@@ -1,3 +1,10 @@
-lalala
-
+<h1>Trade Confirmation</h1>
 <%# enact methods here to crud on the associated ownerships and change their user_id %>
+
+<%= @self_ownership.baby.name %>
+
+<%= @foreign_ownership.baby.name %>
+
+
+<%= button_to 'Confirm Trade', confirm_trade_path %>
+

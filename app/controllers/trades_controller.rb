@@ -12,18 +12,38 @@ class TradesController < ApplicationController
     end
 
   def show
+    
+        trade = Trade.find(params[:id])
+
+        @self_ownership = Ownership.find(trade.g_ownership_id)
+        @foreign_ownership = Ownership.find(trade.d_ownership_id)
   
   end
     
-    
+  def trade
+    trade = Trade.find(params[:id])
+    @self_ownership = Ownership.find(trade.g_ownership_id)
+    @foreign_ownership = Ownership.find(trade.d_ownership_id)
+    confirm_trade(@self_ownership, @foreign_ownership)
+    redirect_to user_path(@current_user)
+  end
 
     def create
-        byebug
-        trade = Trade.create(g_ownership_id: given_params, d_ownership_id: params[:id])
+        
+        trade = Trade.create(g_ownership_id: given_params[:g_ownership_id], d_ownership_id: params[:id])
         redirect_to trade_path(trade)
     end
 
     private
+
+    def confirm_trade(self_ownership, for_ownership)
+   
+        self_id = self_ownership.user_id
+        for_id = for_ownership.user_id
+        self_ownership.update(user_id: for_id)
+        for_ownership.update(user_id: self_id)
+        byebug
+    end
 
     def given_params
         params.require(:trade).permit(:g_ownership_id)
