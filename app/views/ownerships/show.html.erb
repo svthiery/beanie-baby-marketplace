@@ -2,6 +2,8 @@
 
 <img src=<%= @ownership.baby.img_url %>>
 
+<% unless @ownership.user.id == @current_user.id %>
 <%= link_to 'Trade for this baby', noo_trade_path  %>
+<% end %>
 
 <%#rest of ownership data needs to go here, ie purchase price, year of purchase, quality, etc%>
