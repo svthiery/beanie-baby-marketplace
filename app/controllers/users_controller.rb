@@ -29,7 +29,8 @@ class UsersController < ApplicationController
 
     def show
         @user = User.find(params[:id])
-        byebug
+        @user_pending_trades_offered = Trade.where(g_ownership_id: 4)
+        @pending_trades = @user_pending_trades_offered.where(status: "pending")
     end
 
 

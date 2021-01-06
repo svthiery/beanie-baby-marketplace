@@ -16,7 +16,6 @@ class TradesController < ApplicationController
 
         @self_ownership = Ownership.find(@trade.g_ownership_id)
         @foreign_ownership = Ownership.find(@trade.d_ownership_id)
-        byebug
   end
 
   def cancel

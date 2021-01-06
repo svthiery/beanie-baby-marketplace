@@ -8,9 +8,11 @@
 <%= link_to 'Add Beanie Baby', new_ownership_path %>
 <% end%>
 
-<p><b>Pending Trades Proposed by User: </b><% @user.g_ownerships do |go| %></p>
- <%= go.name %>
-<% end %>
+<p><b>Pending Trades Proposed by User: </b></p>
+ <ul><% @pending_trades.each do |trade| %>
+ <li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= trade.d_ownership.user.name %></li>
+ <% end %>
+</ul>
 
 <p>All babies: <% @user.ownerships.each do |ownership| %></p>
 <%= ownership.baby.name %>
