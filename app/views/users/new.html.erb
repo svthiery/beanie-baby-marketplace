@@ -1,0 +1,31 @@
+<h1>Register as a user here!</h1>
+
+
+<% if !flash[:errors].nil? %>
+ <%    flash[:errors].each do |error| %>
+    <%= error %>
+    <% end %>
+<% end%>
+<br>
+<%= form_for @user do |f| %>
+
+<%= f.label :user_name %>
+<%= f.text_field :user_name %>
+<br>
+<%= f.label :password %>
+<%= f.password_field :password %>
+<br>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<br>
+<%= f.label :age %>
+<%= f.number_field :age %>
+<br>
+<%= f.label :location %>
+<%= f.text_field :location %>
+<br>
+Favorite Beanie Baby
+<%= f.collection_select(:favorite_baby, @babies, :id, :name ) %>
+<br>
+<%= f.submit %>
+<% end %>

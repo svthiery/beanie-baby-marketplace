@@ -24,15 +24,18 @@ ActiveRecord::Schema.define(version: 2021_01_04_191715) do
   end
 
   create_table "ownerships", force: :cascade do |t|
+    t.string "name"
     t.integer "baby_id"
     t.integer "user_id"
+    t.string "purchase_price"
+    t.string "condition"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "trades", force: :cascade do |t|
-    t.integer "trader_id"
-    t.integer "tradee_id"
+    t.integer "g_ownership_id"
+    t.integer "d_ownership_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

@@ -1,7 +1,5 @@
 <h1>Trade a Beanie Baby for <%= @desired_baby.name %></h1>
 
-<%= form_for @trade do |f| %>
-<%= f.label :tradee %>
-<%= f.collection_select :tradee_id, @users, :id, :name %>
-<%= f.submit %>
+<%= form_for :baby do |f| %>
+<%= f.collection_select(:g_ownership_id, @babies, :id, ) %>
 <% end %>

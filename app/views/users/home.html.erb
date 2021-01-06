@@ -1,0 +1,7 @@
+<h1>Welcome to your home page <%= @current_user.name %></h1>
+
+<%= link_to 'Profile Page', user_path(@current_user, method: :get) %>
+<br>
+<%= link_to 'List of Beanie Babies', babies_path %>
+<br>
+<%= link_to 'List of Beanie Baby Sellers', users_path  %>

@@ -2,6 +2,7 @@
 
 <h1>Behold the babies!</h1>
 <br>
+Press <%= link_to 'here', home_path  %> to return to home page
 <ul>
 <% @babies.each do |b| %>
 <img src=<%= b.img_url %>>
@@ -13,4 +14,5 @@
 
 <br>
 <% end %>
+
 </ul>

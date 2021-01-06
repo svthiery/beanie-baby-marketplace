@@ -1,6 +1,28 @@
 class UsersController < ApplicationController
 
     skip_before_action :authorize_user, only: [:login, :post_login, :new, :create]
+
+
+    def new
+        @babies = Baby.all
+        @user = User.new
+    end
+
+    def create
+        new_user = User.create(user_params)
+        flash[:errors] = new_user.errors.full_messages
+        if new_user
+            session[:current_user_id] = new_user.id
+            redirect_to user_path(new_user)
+        else
+            redirect_to new_user_path
+        end
+    end
+
+    def home
+        
+    end
+
     def index
         @users = User.all
     end
@@ -9,8 +31,10 @@ class UsersController < ApplicationController
         @user = User.find(params[:id])
     end
 
+
+
     def create_trade(arg)
-        
+
     end
 
     def login
@@ -32,6 +56,12 @@ class UsersController < ApplicationController
     def logout
         session[:current_user_id] = nil
         redirect_to login_path
+    end
+
+
+    private
+    def user_params
+        params.require(:user).permit(:name, :user_name, :password, :location, :favorite_baby, :age)
     end
 
 end

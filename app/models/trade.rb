@@ -1,4 +1,4 @@
 class Trade < ApplicationRecord
-#  belongs_to :trader, class_name: "User" , optional: true
-#  belongs_to :tradee, class_name: "User"
+ belongs_to :g_ownership, class_name: "Ownership" , optional: true
+ belongs_to :d_ownership, class_name: "Ownership", optional: true
 end
