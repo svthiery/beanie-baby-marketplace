@@ -7,7 +7,7 @@ class OwnershipsController < ApplicationController
     def create
         # byebug
         @baby = Baby.find(baby_params[:baby_id].to_i)
-        a = Ownership.create(baby_id: baby_params[:baby_id], user_id: @current_user.id, name: @baby_name )
+        a = Ownership.create(baby_id: baby_params[:baby_id], user_id: @current_user.id, name: @baby.name )
         redirect_to user_path(a.user_id)
 
     end
