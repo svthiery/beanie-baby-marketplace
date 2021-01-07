@@ -9,5 +9,6 @@
 <% if @trade.d_ownership.user.id == @current_user.id %> 
 <%= button_to 'Confirm Trade', confirm_trade_path %>
 <% end %>
+<% if @trade.d_ownership.user.id == @current_user.id || @trade.g_ownership.user.id == @current_user.id %>
 <%= button_to 'Cancel Trade', cancel_trade_path, method: :patch %>
-
+<% end %>

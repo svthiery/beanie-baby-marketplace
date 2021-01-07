@@ -12,7 +12,7 @@
 List of sellers with this Beanie Baby:
 <br>
 <% b.users.each do |u| %>
-<%= u.name %> 
+<%= link_to u.name, user_path(u) %> 
 <br>
 <% end %>
 <% end %>

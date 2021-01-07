@@ -84,5 +84,7 @@ He wants to have some Halloween fun!', img_url: 'https://beaniepedia.com/beanies
     User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, user_name: Faker::Creature::Dog.name, password: "abc123")
     end
 
+    # User.create(name: 'Not logged in')
+
 
 puts "Seeding Complete"

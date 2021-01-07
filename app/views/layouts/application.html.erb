@@ -10,7 +10,7 @@
   </head>
 
   <body>
-
+  <% if check_login? %>
   <div id="navbar">
   <ul>
   <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
@@ -21,7 +21,7 @@
   </ul>
 </div>
 
-  <% if check_login? %>
+  
   Logged in as <%= @current_user.name %>
   <br>
   <%= button_to 'Log Out', logout_path, method: :delete %>
