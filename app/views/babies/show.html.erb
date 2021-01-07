@@ -1,5 +1,4 @@
 <h1><%= @baby.name %></h1>
-<h2>TEST</h2>
 <img src=<%= @baby.img_url %>>
 <ul>
 <li><%= @baby.release_year %></li>
@@ -8,8 +7,7 @@
 </ul>
 
 
-<% flash[:baby] = @baby %>
-<%= link_to 'Trade for this Baby!', new_trade_path(@baby) %>
+
 
 
 <blockquote><%= @baby.poem %></blockquote>

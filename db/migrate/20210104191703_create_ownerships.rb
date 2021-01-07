@@ -4,7 +4,7 @@ class CreateOwnerships < ActiveRecord::Migration[6.0]
       t.string :name
       t.integer :baby_id
       t.integer :user_id
-      t.string :purchase_price
+      t.integer :purchase_price
       t.string :condition
       t.timestamps
     end

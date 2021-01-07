@@ -1,7 +1,15 @@
 <h1><%= @ownership.baby.name %></h1>
 
 <img src=<%= @ownership.baby.img_url %>>
+<br>
+Condition: <%= @ownership.condition %>
+<br>
+Purchase Price: $<%= @ownership.purchase_price %>
+<br>
 
+<% if @ownership.user != @current_user%>
 <%= link_to 'Trade for this baby', noo_trade_path  %>
+<br>
+<%= link_to 'Purchase this Baby', purchase_path %>
+<% end%>
 
-<%#rest of ownership data needs to go here, ie purchase price, year of purchase, quality, etc%>
