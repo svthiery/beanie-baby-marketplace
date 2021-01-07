@@ -20,6 +20,8 @@
     padding: 0;
     overflow: hidden;
     background-color: #ffcce6;
+    top: 0;
+    left: 0;
   }
   
   #navbar li {
