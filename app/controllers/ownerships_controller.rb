@@ -20,7 +20,6 @@ class OwnershipsController < ApplicationController
 
     def show
         @ownership = Ownership.find(params[:id])
-        byebug
     end
 
     private

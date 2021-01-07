@@ -9,6 +9,7 @@ class TradesController < ApplicationController
         @babies = Ownership.all.select {|baby| baby.user == @current_user}
 
         @trade = Trade.new
+        byebug
     end
 
   def show
@@ -35,6 +36,7 @@ class TradesController < ApplicationController
         
         trade = Trade.create(g_ownership_id: given_params[:g_ownership_id], d_ownership_id: params[:id], status: "pending")
         redirect_to trade_path(trade)
+        byebug
     end
 
     private
