@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 2021_01_06_182958) do
     t.string "location"
     t.string "favorite_baby"
     t.integer "age"
-    t.float "wallet"
+    t.integer "wallet"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
