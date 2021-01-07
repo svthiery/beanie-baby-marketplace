@@ -11,7 +11,7 @@ class UsersController < ApplicationController
     def create
         new_user = User.create(user_params)
         flash[:errors] = new_user.errors.full_messages
-        if new_user
+        if new_user.id
             session[:current_user_id] = new_user.id
             redirect_to user_path(new_user)
         else
@@ -35,7 +35,15 @@ class UsersController < ApplicationController
         @pending_trades_recieved = @user_pending_trades_received.where(status: "pending")
     end
 
+    def add_funds
+        @user = User.find(params[:id])
+    end
 
+    def update
+        user = User.find(params[:id])
+        user.update(wallet: user.wallet + money_params[:wallet].to_i)
+        redirect_to user_path(user)
+    end
 
     def create_trade(arg)
 
@@ -65,7 +73,10 @@ class UsersController < ApplicationController
 
     private
     def user_params
-        params.require(:user).permit(:name, :user_name, :password, :location, :favorite_baby, :age)
+        params.require(:user).permit(:name, :user_name, :password, :location, :favorite_baby, :age, :wallet)
     end
 
+    def money_params
+            params.require(:user).permit(:wallet)
+    end
 end

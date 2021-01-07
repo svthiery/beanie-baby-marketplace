@@ -1,8 +1,7 @@
 
 
 <h1>Behold the babies!</h1>
-<br>
-Press <%= link_to 'here', home_path  %> to return to home page
+
 <ul>
 <% @babies.each do |b| %>
 <li><img class= "babyindeximg" src=<%= b.img_url %>>
@@ -10,6 +9,11 @@ Press <%= link_to 'here', home_path  %> to return to home page
 
 
 <br>
+List of sellers with this Beanie Baby:
+<br>
+<% b.users.each do |u| %>
+<%= u.name %> 
+<br>
 <% end %>
-
+<% end %>
 </ul>

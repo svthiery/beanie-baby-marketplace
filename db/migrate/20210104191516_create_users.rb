@@ -7,6 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :location
       t.string :favorite_baby
       t.integer :age
+      t.float :wallet
       t.timestamps
     end
   end

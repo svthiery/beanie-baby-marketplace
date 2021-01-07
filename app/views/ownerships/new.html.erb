@@ -5,5 +5,14 @@
 
 <%= f.label "Beanie Baby" %>
 <%= f.collection_select(:baby_id, Baby.all, :id, :name) %>
+<br>
+<%= f.label :condition %>
+<%= f.text_field :condition %>
+<br>
+<%= f.label :purchase_price %>
+<%= f.number_field :purchase_price %>
+<br>
 <%= f.submit %>
+
+
 <% end %>

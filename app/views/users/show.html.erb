@@ -5,6 +5,10 @@
 <p>Location: <%= @user.location %></p>
 <p>Favorite baby: <%= @user.favorite_baby %></p>
 <% if @current_user == @user %>
+You currently have $<%= @user.wallet %> in your wallet.
+<br>
+Click <%= link_to 'here', add_funds_path %> if you would like to add funds to your wallet.
+<br>
 <%= link_to 'Add Beanie Baby', new_ownership_path %>
 <% end%>
 
@@ -23,6 +27,7 @@
 <p>All babies: <% @user.ownerships.each do |ownership| %></p>
 <%= ownership.baby.name %>
  <img src=<%= ownership.baby.img_url %>>
+ <br>
  <%= link_to 'See this Beanie Baby\'s bio', ownership_path(ownership) %>
  <% end %>
  

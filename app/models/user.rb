@@ -13,4 +13,5 @@ class User < ApplicationRecord
     has_many :babies, through: :ownerships
 
     has_secure_password
+    validates :user_name, uniqueness: true
 end

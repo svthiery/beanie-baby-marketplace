@@ -21,11 +21,14 @@
 <%= f.label :age %>
 <%= f.number_field :age %>
 <br>
+<%= f.label 'Add money to your account $' %>
+<%= f.number_field :wallet  %>
+<br>
 <%= f.label :location %>
 <%= f.text_field :location %>
 <br>
 Favorite Beanie Baby
-<%= f.collection_select(:favorite_baby, @babies, :id, :name ) %>
+<%= f.collection_select(:favorite_baby, @babies, :name, :name ) %>
 <br>
 <%= f.submit %>
 <% end %>
