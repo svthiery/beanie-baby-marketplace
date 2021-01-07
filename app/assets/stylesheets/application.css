@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+/* Style the navbar */
+#navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #ffcce6;
+  }
+  
+  #navbar li {
+    float: left;
+  }
+  
+  #navbar li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: Garamond, serif;
+    font-size: 40px;
+  }
+
+  #logo {
+    padding: 5px;
+    width: 120px;
+  }
+
+  .babyindeximg {
+    padding: 5px;
+    width: 100px;
+  }

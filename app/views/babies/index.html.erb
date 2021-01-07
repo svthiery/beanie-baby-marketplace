@@ -5,12 +5,9 @@
 Press <%= link_to 'here', home_path  %> to return to home page
 <ul>
 <% @babies.each do |b| %>
-<img src=<%= b.img_url %>>
-<li><%=link_to b.name, baby_path(b) %></li>
-<li><%= b.release_year %></li>
-<li><%= b.species %></li>
-<li>$<%= b.msrp %></li>
-<li><%= b.poem %></li>
+<li><img class= "babyindeximg" src=<%= b.img_url %>>
+<%=link_to b.name, baby_path(b) %></li>
+
 
 <br>
 <% end %>

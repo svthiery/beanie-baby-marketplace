@@ -33,7 +33,6 @@ class TradesController < ApplicationController
   end
 
     def create
-        
         trade = Trade.create(g_ownership_id: given_params[:g_ownership_id], d_ownership_id: params[:id], status: "pending")
         redirect_to trade_path(trade)
         byebug
@@ -42,11 +41,13 @@ class TradesController < ApplicationController
     private
 
     def confirm_trade(self_ownership, for_ownership)
-   
+        @trade = Trade.find(params[:id])
+        byebug
         self_id = self_ownership.user_id
         for_id = for_ownership.user_id
         self_ownership.update(user_id: for_id)
         for_ownership.update(user_id: self_id)
+        @trade.update(status: "completed")
     end
 
     def given_params

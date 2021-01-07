@@ -10,7 +10,13 @@
 
 <p><b>Pending Trades Proposed by User: </b></p>
  <ul><% @pending_trades_offered.each do |trade| %>
- <li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= trade.d_ownership.user.name %></li>
+ <li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li>
+ <% end %>
+</ul>
+
+<p><b>Pending Trades for User to Confirm: </b></p>
+ <ul><% @pending_trades_recieved.each do |trade| %>
+ <li><%= trade.g_ownership.user.name %> wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></li>
  <% end %>
 </ul>
 

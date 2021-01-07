@@ -10,10 +10,9 @@ require 'faker'
 Baby.destroy_all
 User.destroy_all
 
-Baby.create(name: "Squealer the Pig", release_year: 1997, poem: "Claude the crab paints by the sea
-A famous artist he hopes to be
-But the tide came in and his paints fell
-Now his art is on his shell!", img_url: "https://beaniepedia.com/beanies/files/2015/10/claude-1.jpg", species: "Crab", msrp: 7)
+Baby.create(name: "Squealer the Pig", release_year: 1994, poem: "Squealer likes to joke around\nHe is known as class clown
+Listen to his stories awhile
+There is no doubt he’ll make you smile!", img_url: "https://beaniepedia.com/beanies/files/2012/10/41TP0C93AYL._SL500_AA300_.jpg", species: "Pig", msrp: 7)
 
 Baby.create(name: "Claude the Crab", release_year: 1997, poem: "Claude the crab paints by the sea
 A famous artist he hopes to be
@@ -84,5 +83,6 @@ He wants to have some Halloween fun!', img_url: 'https://beaniepedia.com/beanies
 10.times do 
     User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, user_name: Faker::Creature::Dog.name, password: "abc123")
     end
+
 
 puts "Seeding Complete"
