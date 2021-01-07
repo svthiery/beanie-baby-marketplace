@@ -12,16 +12,6 @@
   <body>
 
   <% if check_login? %>
-    <div id="navbar">
-    <ul>
-    <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
-    <li><a href=<%= home_path %>>Home</a></li>
-    <li><a href=<%= user_path(@current_user) %>>Profile</a></li>
-    <li><a href=<%= babies_path %>>Beanie Babies</a></li>
-    <li><a href=<%= users_path %>>Users</a></li>
-    </ul>
-  </div>
-  <% if check_login? %>
   <div id="navbar">
   <ul>
   <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
@@ -37,7 +27,14 @@
   <br>
   <%= button_to 'Log Out', logout_path, method: :delete %>
   <% else %>
-  <%= link_to 'Log In', login_path %>
+  <div id="navbar">
+  <ul>
+  <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
+  <li><a href=<%= home_path %>>Home</a></li>
+  <li><a href=<%= babies_path %>>Beanie Babies</a></li>
+  <li><a href=<%= users_path %>>Users</a></li>
+  </ul>
+</div>
 <%   end %>
 <br>
   
