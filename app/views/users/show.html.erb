@@ -1,34 +1,34 @@
-<h1><%= @user.name %></h1>
+<p><h1><%= @user.name %></h1></p>
 
-<p>Username: <%= @user.user_name %></p>
-<p>Age: <%= @user.age %></p>
-<p>Location: <%= @user.location %></p>
-<p>Favorite baby: <%= @user.favorite_baby %></p>
+<p><b>Username: </b><%= @user.user_name %></p>
+<p><b>Age: </b><%= @user.age %></p>
+<p><b>Location: </b><%= @user.location %></p>
+<p><b>Favorite baby: </b><%= @user.favorite_baby %></p>
 <% if @current_user == @user %>
-You currently have $<%= @user.wallet %> in your wallet.
+<p>You currently have $<%= @user.wallet %> in your wallet.</p>
 <br>
-Click <%= link_to 'here', add_funds_path %> if you would like to add funds to your wallet.
+<p>Click <%= link_to 'here', add_funds_path %> if you would like to add funds to your wallet.</p>
 <br>
-<%= link_to 'Add Beanie Baby', new_ownership_path %>
+<p><%= link_to 'Add Beanie Baby', new_ownership_path %><p>
 <% end%>
 
 <p><b>Pending Trades Proposed by User: </b></p>
  <ul><% @pending_trades_offered.each do |trade| %>
- <li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li>
+ <p><li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li></p>
  <% end %>
 </ul>
 
 <p><b>Pending Trades for User to Confirm: </b></p>
  <ul><% @pending_trades_recieved.each do |trade| %>
- <li><%= trade.g_ownership.user.name %> wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></li>
+ <p><li><%= trade.g_ownership.user.name %> wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></p></li>
  <% end %>
 </ul>
 
-<p>All babies: <% @user.ownerships.each do |ownership| %></p>
-<%= ownership.baby.name %>
+<p><b>All babies: </b><% @user.ownerships.each do |ownership| %></p>
+<p><%= ownership.baby.name %></p>
  <img src=<%= ownership.baby.img_url %>>
  <br>
- <%= link_to 'See this Beanie Baby\'s bio', ownership_path(ownership) %>
+ <p><%= link_to 'See this Beanie Baby\'s bio', ownership_path(ownership) %></p>
  <% end %>
  
 

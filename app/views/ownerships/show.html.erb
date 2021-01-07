@@ -1,5 +1,5 @@
 <h1><%= @ownership.baby.name %></h1>
-
+<div>
 <img src=<%= @ownership.baby.img_url %>>
 <br>
 Condition: <%= @ownership.condition %>
@@ -14,3 +14,4 @@ Purchase Price: $<%= @ownership.purchase_price %>
 <%= link_to 'Purchase this Baby', purchase_path %>
 <% end%>
 
+</div>

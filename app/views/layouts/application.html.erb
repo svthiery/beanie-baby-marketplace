@@ -4,7 +4,10 @@
     <title>BeanieBabyMarketplace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -23,7 +26,7 @@
 </div>
 
   
-  Logged in as <%= @current_user.name %>
+  <p>Logged in as <%= @current_user.name %></p>
   <br>
   <%= button_to 'Log Out', logout_path, method: :delete %>
   <% else %>

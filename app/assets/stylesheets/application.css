@@ -14,14 +14,35 @@
  *= require_self
  */
 /* Style the navbar */
+
+* {background-color: white;
+  border-color: black;
+}
+a {color:red;
+  font-family: 'Gaegu', cursive;
+}
+
+p { color:red;
+  font-family: 'Gaegu', cursive;
+    border-color: black;
+}
+h1 {color: red;
+  font-family: 'Gaegu';
+}
+div { color: red;
+  font-family: 'Gaegu', cursive;
+  border-color: black;
+}
+
+
+
 #navbar ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #ffcce6;
-    top: 0;
-    left: 0;
+    height: 130px;
   }
   
   #navbar li {
@@ -31,16 +52,22 @@
   #navbar li a {
     display: block;
     color: white;
+    background-color: #ffcce6;
     text-align: center;
     padding: 14px 16px;
+    justify-content: space-evenly;
+    align-items: center;
     text-decoration: none;
     font-family: Garamond, serif;
-    font-size: 40px;
+    font-size: 60px;
+   
   }
 
   #logo {
+    background-color: #ffcce6;
     padding: 5px;
     width: 120px;
+ 
   }
 
   .babyindeximg {
