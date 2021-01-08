@@ -89,6 +89,7 @@ a:link {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 5px;
+    justify-items: center;
 }
 
 .user-info-box {
@@ -130,4 +131,5 @@ a:link {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
+  justify-items: center;
 }
