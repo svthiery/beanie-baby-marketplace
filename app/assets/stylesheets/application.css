@@ -27,6 +27,8 @@ p { color:black;
 
 h1 {color: black;
   font-family: 'Gaegu', cursive;
+  text-align: center;
+  font-size: 55px;
 }
 div { color: red;
   font-family: Garamond, serif;
@@ -80,11 +82,52 @@ a:link {
   color: black;
   font-family: 'Gaegu', cursive;
   text-decoration: none;
+  font-size: 30px;
 }
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
 }
 
+.user-info-box {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.user-info-box p {
+  background-color:  #ffcce6;
+}
+
+.wallet-info {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.wallet-info p, .wallet-info a, .pending-trades-box p, .pending-trades-box a, .pending-trades-box h3 {
+  background-color:  #ffcce6;
+}
+
+.pending-trades-box {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+}
