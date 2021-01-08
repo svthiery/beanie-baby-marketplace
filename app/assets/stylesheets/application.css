@@ -60,7 +60,50 @@ ul {
   top: 500px;
 }
 
+a {
+  background-color: red;
+  text-transform: uppercase;
+  color: white;
+}
+
+#baby-link {
+  color: black;
+  box-shadow: 0px 0px black;
+  background-color: white;
+}
+
+a:link  {
+  box-shadow: 5px 5px black;
+  font-family: 'Gaegu', cursive;
+  background-color: rgb(180, 24, 159);
+text-decoration: none;
+border-radius: 2px;
+font-size: 18px;
+}
+
+a:visited {
+  box-shadow: 5px 5px black;
+  font-family: 'Gaegu', cursive;
+  background-color: rgb(180, 24, 159);
+color: white;
+
+}
+
+a:hover {
+  font-family: 'Gaegu', cursive;
+  background-color: red;
+color: white;
+}
+
+a:active {
+  box-shadow: 0px 0px;
+  font-family: 'Gaegu', cursive;
+  background-color: green;
+color: white;
+}
+
 #navbar ul {
+  box-shadow: 0px 0px;
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -70,10 +113,12 @@ ul {
   }
   
 #navbar li {
+  box-shadow: 0px 0px;
     float: left;
   }
   
 #navbar li a {
+  box-shadow: 0px 0px;
     display: block;
     color: white;
     background-color: #ffcce6;

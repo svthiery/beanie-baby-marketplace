@@ -28,19 +28,19 @@
     <div class="pending-trades-box" class="user-grid-item">
     <p><h3>Pending Trades for User to Confirm: </h3></p>
     <ul><% @pending_trades_recieved.each do |trade| %>
-    <p><li><%= trade.g_ownership.user.name %> wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></p></li>
+    <p><li><%= trade.g_ownership.user.name %> wants <span class="link"><%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></span></p></li>
     <% end %>
     </ul>
     </div>
 </div>
 
-<h1>All babies:</h1>
+<h1> Listings </h1>
 <div class="grid-container">
     <% @user.ownerships.each do |ownership| %>
     <div class="grid-child"><p><%= ownership.baby.name %></p>
         <img class= "user-show-img" src=<%= ownership.baby.img_url %>>
         <br>
-    <p><%= link_to 'Buy or Trade for this Beanie Baby', ownership_path(ownership) %></p>
+    <p class="link"><%= link_to 'See Listing', ownership_path(ownership) %></p>
     </div>
     <% end %>
  </div>

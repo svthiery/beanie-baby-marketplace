@@ -1,4 +1,4 @@
-<h1><%= @ownership.baby.name %></h1>
+<h1><%= @ownership.user.name %>'s <%= @ownership.baby.name %></h1>
 <div>
 <img src=<%= @ownership.baby.img_url %>>
 <br>
@@ -14,8 +14,9 @@ Purchase Price: $<%= @ownership.purchase_price %>
 <% if @current_user.wallet < @ownership.purchase_price%>
 <p>You do not have enough money to buy this beanie baby.</p>
 <% else %>
-<p><%= link_to 'Purchase this Baby', purchase_path %></P>
+<p class = "link"><%= link_to 'Purchase this Baby', purchase_path %></P>
 <% end%>
 <% end%>
 
 </div>
+
