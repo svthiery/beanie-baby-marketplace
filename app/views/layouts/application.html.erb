@@ -16,28 +16,27 @@
 
   <% if check_login? %>
   <div id="navbar">
-  <ul>
-  <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
-  <li><a href=<%= home_path %>>Home</a></li>
-  <li><a href=<%= user_path(@current_user) %>>Profile</a></li>
-  <li><a href=<%= babies_path %>>Beanie Babies</a></li>
-  <li><a href=<%= users_path %>>Marketplace</a></li>
-  </ul>
+    <ul>
+      <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
+      <li><a href=<%= home_path %>>Home</a></li>
+      <li><a href=<%= user_path(@current_user) %>>Profile</a></li>
+      <li><a href=<%= babies_path %>>Beanie Babies</a></li>
+      <li><a href=<%= users_path %>>Marketplace</a></li>
+      <p>Logged in as <%= @current_user.name %></p>
+    </ul>
 </div>
 
-  
-  <p>Logged in as <%= @current_user.name %></p>
   <br>
   <%= button_to 'Log Out', logout_path, method: :delete %>
   <% else %>
-  <div id="navbar">
-  <ul>
-  <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
-  <li><a href=<%= home_path %>>Home</a></li>
-  <li><a href=<%= babies_path %>>Beanie Babies</a></li>
-  <li><a href=<%= users_path %>>Marketplace</a></li>
-  </ul>
-</div>
+    <div id="navbar">
+      <ul>
+        <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
+        <li><a href=<%= home_path %>>Home</a></li>
+        <li><a href=<%= babies_path %>>Beanie Babies</a></li>
+        <li><a href=<%= users_path %>>Marketplace</a></li>
+      </ul>
+    </div>
 <%   end %>
 <br>
   
