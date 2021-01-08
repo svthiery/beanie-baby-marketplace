@@ -280,3 +280,10 @@ color: white;
 #baby-ownership-page p {
   text-align: center;
 }
+
+#login-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}

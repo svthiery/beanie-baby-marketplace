@@ -1,5 +1,5 @@
 <h1>Log In</h1>
-<div>
+<div id="login-div">
 <% if @error %>
     <p><%= @error %></p>
 <% end %>
@@ -8,8 +8,11 @@
 <%= label_tag :user_name %>
 <%= text_field_tag :user_name %>
 <br>
+<br>
 <%= label_tag :password %>
 <%= password_field_tag :password %>
+<br>
+<br>
 <%= submit_tag 'Log In' %>
 <% end %>
 <br>
