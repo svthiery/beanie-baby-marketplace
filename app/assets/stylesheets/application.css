@@ -161,3 +161,15 @@ ul {
   padding: 5px;
   width: 250px;
 }
+
+.home-grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  justify-items: center;
+}
+
+.home-photo {
+  width: 125px;
+}
+
