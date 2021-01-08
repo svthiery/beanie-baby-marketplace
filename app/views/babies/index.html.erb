@@ -4,7 +4,7 @@
     <div class="grid-child">
         <h2 class="babyindexname"><%=b.name %></h2>
         <a href="<%= baby_path(b) %>"><img class= "babyindeximg" src=<%= b.img_url %>></a>
-    <p><b>List of sellers with this Beanie Baby:</b></p>
+    <p><b>Sellers with this Beanie Baby:</b></p>
     <br>
     <% unique_users = b.users.uniq%>
         <% unique_users.each do |u| %>
