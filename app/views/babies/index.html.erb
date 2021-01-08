@@ -11,7 +11,8 @@
 <br>
 <h1>List of sellers with this Beanie Baby:</h1>
 <br>
-<% b.users.each do |u| %>
+<% unique_users = b.users.uniq%>
+<% unique_users.each do |u| %>
 <p><%= link_to u.name, user_path(u) %> </p>
 <br>
 <% end %>
