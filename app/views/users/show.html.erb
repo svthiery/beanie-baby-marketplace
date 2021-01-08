@@ -25,7 +25,7 @@
     <div class="pending-trades-box" class="user-grid-item">
     <p><h3>PENDING TRADES PROPOSED BY USER</h3></p>
     <ul><% @pending_trades_offered.each do |trade| %>
-    <p><li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li></p>
+    <li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li>
     <% end %>
     </ul>
     </div>
@@ -33,7 +33,7 @@
     <div class="pending-trades-box" class="user-grid-item">
     <p><h3>PENDING TRADES FOR USER TO CONFIRM</h3></p>
     <ul><% @pending_trades_recieved.each do |trade| %>
-    <p><li><%= trade.g_ownership.user.name %> wants <span class="link"><%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></span></p></li>
+    <li><%= trade.g_ownership.user.name %> wants <span class="link"><%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></span></li>
     <% end %>
     </ul>
     </div>

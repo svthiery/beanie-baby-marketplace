@@ -40,6 +40,7 @@ div { color: red;
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 #poem {
@@ -193,6 +194,10 @@ color: white;
   width: 400px;
   padding: 15px;
   border-radius: 25px;
+}
+
+.pending-trades-box li {
+  background-color:  #ffcce6;
 }
 
 .user-grid {

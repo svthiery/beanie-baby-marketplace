@@ -2,7 +2,7 @@
 <%# enact methods here to crud on the associated ownerships and change their user_id %>
 
 <p><b><%= @self_ownership.user.name %> has requested to trade:</b></p>
-<%= @self_ownership.baby.name %>
+<p><%= @self_ownership.baby.name %></p>
 <p><b>with <%= @foreign_ownership.user.name %> for their:</b></p>
 <p><%= @foreign_ownership.baby.name %></p>
 <br>
