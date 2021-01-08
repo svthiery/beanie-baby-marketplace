@@ -294,3 +294,10 @@ color: white;
   padding: 10px;
   text-align: center;
 }
+
+#register-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}

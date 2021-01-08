@@ -1,6 +1,6 @@
 <h1>Register as a user here!</h1>
 
-<div>
+<div id="register-div">
 <% if !flash[:errors].nil? %>
  <%    flash[:errors].each do |error| %>
     <%= error %>
@@ -12,23 +12,30 @@
 <%= f.label :user_name %>
 <%= f.text_field :user_name %>
 <br>
+<br>
 <%= f.label :password %>
 <%= f.password_field :password %>
+<br>
 <br>
 <%= f.label :name %>
 <%= f.text_field :name %>
 <br>
+<br>
 <%= f.label :age %>
 <%= f.number_field :age %>
+<br>
 <br>
 <%= f.label 'Add money to your account $' %>
 <%= f.number_field :wallet  %>
 <br>
+<br>
 <%= f.label :location %>
 <%= f.text_field :location %>
 <br>
+<br>
 Favorite Beanie Baby
 <%= f.collection_select(:favorite_baby, @babies, :name, :name ) %>
+<br>
 <br>
 <%= f.submit %>
 <% end %>
