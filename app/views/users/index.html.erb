@@ -1,6 +1,6 @@
 <h1>All Users</h1>
-Press <%= link_to 'here', home_path  %> to return to home page
-<br>
+<div>
+
 <ul>
 <% @users.each do |user| %>
     <li><b><%= link_to user.user_name, user_path(user) %></b><br>
@@ -8,6 +8,7 @@ Press <%= link_to 'here', home_path  %> to return to home page
     <br>
     Beanie Baby Collection size: <%= user.ownerships.length %>
     </li>
-
+    <br>
 <% end %>
 </ul>
+</div>

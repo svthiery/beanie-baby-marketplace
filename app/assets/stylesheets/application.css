@@ -18,22 +18,35 @@
 * {background-color: white;
   border-color: black;
 }
-a {color:red;
-  font-family: 'Gaegu', cursive;
-}
 
-p { color:red;
-  font-family: 'Gaegu', cursive;
+
+p { color:black;
+  font-family: Garamond, serif;
     border-color: black;
 }
-h1 {color: red;
-  font-family: 'Gaegu';
+
+h1 {color: black;
+  font-family: 'Gaegu', cursive;
+  text-align: center;
+  font-size: 70px;
 }
 div { color: red;
-  font-family: 'Gaegu', cursive;
+  font-family: Garamond, serif;
   border-color: black;
 }
+a:link {
+  text-decoration: none;
+  color: red;
+}
 
+a:visited {
+  text-decoration: none;
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+}
 
 
 #navbar ul {
@@ -45,32 +58,118 @@ div { color: red;
     height: 130px;
   }
   
-  #navbar li {
+#navbar li {
     float: left;
   }
   
-  #navbar li a {
+#navbar li a {
     display: block;
     color: white;
     background-color: #ffcce6;
     text-align: center;
-    padding: 14px 16px;
-    justify-content: space-evenly;
-    align-items: center;
+    padding: 24px;
     text-decoration: none;
-    font-family: Garamond, serif;
+    font-family: 'Gaegu', cursive;
     font-size: 60px;
-   
+    margin: auto;
   }
 
-  #logo {
+#logo {
     background-color: #ffcce6;
     padding: 5px;
     width: 120px;
  
   }
 
-  .babyindeximg {
+.babyindeximg {
     padding: 5px;
-    width: 100px;
+    width: 200px;
   }
+
+.babyindexname {
+  color: black;
+  font-family: 'Gaegu', cursive;
+  text-decoration: none;
+  font-size: 30px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 5px;
+    justify-items: center;
+}
+
+.user-info-box {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.user-info-box p {
+  background-color:  #ffcce6;
+}
+
+.wallet-info {
+  text-align: center;
+  background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.wallet-info p, .wallet-info a, .pending-trades-box p, .pending-trades-box a, .pending-trades-box h3, .baby-show-box p {
+  background-color:  #ffcce6;
+}
+
+.pending-trades-box {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.user-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 5px;
+  justify-items: center;
+}
+
+.baby-show-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.baby-show-box {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.user-show-img {
+  padding: 5px;
+  width: 250px;
+}
+
+.home-grid-parent {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 5px;
+  justify-items: center;
+}
+
+.home-photo {
+  width: 125px;
+}
+
