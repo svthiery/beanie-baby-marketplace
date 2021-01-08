@@ -20,6 +20,7 @@ class OwnershipsController < ApplicationController
 
     def show
         @ownership = Ownership.find(params[:id])
+        @trade = Trade.find_by(g_ownership_id: @ownership.id)
     end
 
     def edit

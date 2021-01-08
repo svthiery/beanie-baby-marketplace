@@ -80,11 +80,15 @@ When they see a ghost named Quivers
 But he’s not here to scare anyone
 He wants to have some Halloween fun!', img_url: 'https://beaniepedia.com/beanies/files/2015/10/quivers-1.jpg')
 
-10.times do 
-    User.create(name:Faker::Name.name, age: rand(30),location: Faker::Address.city, user_name: Faker::Creature::Dog.name, password: "abc123")
-    end
+5.times do 
+    name = Faker::Name.name
+    User.create(name: name, age: rand(30),location: Faker::Address.city, user_name: name, password: "abc123", wallet: rand(100))
+end
 
-    # User.create(name: 'Not logged in')
+    20.times do
+    Ownership.create(baby_id: Baby.all.shuffle.first.id, user_id: User.all.shuffle.first.id, condition: 'Good', purchase_price:rand(10))
+end
+
 
 
 puts "Seeding Complete"

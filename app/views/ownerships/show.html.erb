@@ -9,9 +9,13 @@ Purchase Price: $<%= @ownership.purchase_price %>
 
 
 <% if @ownership.user != @current_user%>
-<%= link_to 'Trade for this baby', noo_trade_path  %>
+<p><%= link_to 'Trade for this baby', noo_trade_path  %></p>
 <br>
-<%= link_to 'Purchase this Baby', purchase_path %>
+<% if @current_user.wallet < @ownership.purchase_price%>
+<p>You do not have enough money to buy this beanie baby.</p>
+<% else %>
+<p><%= link_to 'Purchase this Baby', purchase_path %></P>
+<% end%>
 <% end%>
 
 </div>
