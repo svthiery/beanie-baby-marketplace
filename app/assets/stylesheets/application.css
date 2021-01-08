@@ -37,15 +37,6 @@ div { color: red;
   font-family: Garamond, serif;
   border-color: black;
 }
-a:link {
-  text-decoration: none;
-  color: red;
-}
-
-a:visited {
-  text-decoration: none;
-  color: red;
-}
 
 ul {
   list-style-type: none;
