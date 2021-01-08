@@ -1,10 +1,11 @@
 <div class="user-container">
-  <img src="https://findthatlogo.com/wp-content/gallery/logos-of-the-heart/ty-heart.gif" alt="Heart" style="width:25%;">
+  <img src="https://findthatlogo.com/wp-content/gallery/logos-of-the-heart/ty-heart.gif" alt="Heart" style="width:30%;">
   <div class="user-name-centered"><h1 id="user-name"><%= @user.name %></h1></div>
 </div>
 
 <div class="user-grid">
     <div class="user-info-box" class="user-grid-item">
+    <p><h3>USER INFO</h3></p>
         <p>Username: <%= @user.user_name %></p>
         <p>Age: <%= @user.age %></p>
         <p>Location: <%= @user.location %></p>
@@ -13,6 +14,7 @@
 
     <div class="wallet-info" class="user-grid-item">
         <% if @current_user == @user %>
+        <p><h3>WALLET</h3></p>
             <p>You currently have $<%= @user.wallet %> in your wallet.</p>
         <p>Click <%= link_to 'here', add_funds_path %> if you would like to add funds to your wallet.</p>
         <br>
@@ -21,7 +23,7 @@
     </div>
 
     <div class="pending-trades-box" class="user-grid-item">
-    <p><h3>Pending Trades Proposed by User: </h3></p>
+    <p><h3>PENDING TRADES PROPOSED BY USER</h3></p>
     <ul><% @pending_trades_offered.each do |trade| %>
     <p><li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li></p>
     <% end %>
@@ -29,7 +31,7 @@
     </div>
 
     <div class="pending-trades-box" class="user-grid-item">
-    <p><h3>Pending Trades for User to Confirm: </h3></p>
+    <p><h3>PENDING TRADES FOR USER TO CONFIRM</h3></p>
     <ul><% @pending_trades_recieved.each do |trade| %>
     <p><li><%= trade.g_ownership.user.name %> wants <span class="link"><%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></span></p></li>
     <% end %>
