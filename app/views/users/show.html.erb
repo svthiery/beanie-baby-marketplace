@@ -34,13 +34,16 @@
     </div>
 </div>
 
-<h1>All babies: </b><% @user.ownerships.each do |ownership| %></h1>
-<p><%= ownership.baby.name %></p>
- <img src=<%= ownership.baby.img_url %>>
- <br>
- <p><%= link_to 'See this Beanie Baby\'s bio', ownership_path(ownership) %></p>
- <% end %>
- 
+<h1>All babies:</h1>
+<div class="grid-container">
+    <% @user.ownerships.each do |ownership| %>
+    <div class="grid-child"><p><%= ownership.baby.name %></p>
+        <img class= "user-show-img" src=<%= ownership.baby.img_url %>>
+        <br>
+    <p><%= link_to 'See this Beanie Baby\'s bio', ownership_path(ownership) %></p>
+    </div>
+    <% end %>
+ </div>
 
 
 <br>

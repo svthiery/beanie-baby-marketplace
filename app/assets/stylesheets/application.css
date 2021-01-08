@@ -28,7 +28,7 @@ p { color:black;
 h1 {color: black;
   font-family: 'Gaegu', cursive;
   text-align: center;
-  font-size: 55px;
+  font-size: 70px;
 }
 div { color: red;
   font-family: Garamond, serif;
@@ -39,6 +39,14 @@ a:link {
   color: red;
 }
 
+a:visited {
+  text-decoration: none;
+  color: red;
+}
+
+ul {
+  list-style-type: none;
+}
 
 
 #navbar ul {
@@ -108,13 +116,12 @@ a:link {
 .wallet-info {
   text-align: center;
   background-color:  #ffcce6;
-  text-background-color:  #ffcce6;
   width: 400px;
   padding: 15px;
   border-radius: 25px;
 }
 
-.wallet-info p, .wallet-info a, .pending-trades-box p, .pending-trades-box a, .pending-trades-box h3 {
+.wallet-info p, .wallet-info a, .pending-trades-box p, .pending-trades-box a, .pending-trades-box h3, .baby-show-box p {
   background-color:  #ffcce6;
 }
 
@@ -132,4 +139,25 @@ a:link {
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;
   justify-items: center;
+}
+
+.baby-show-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 25%;
+}
+
+.baby-show-box {
+  text-align: center;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+}
+
+.user-show-img {
+  padding: 5px;
+  width: 250px;
 }
