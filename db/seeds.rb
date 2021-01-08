@@ -81,8 +81,9 @@ But he’s not here to scare anyone
 He wants to have some Halloween fun!', img_url: 'https://beaniepedia.com/beanies/files/2015/10/quivers-1.jpg')
 
 5.times do 
+    random_baby = Baby.all.shuffle.first
     name = Faker::Name.name
-    User.create(name: name, age: rand(30),location: Faker::Address.city, user_name: name, password: "abc123", wallet: rand(100))
+    User.create(name: name, age: rand(30),location: Faker::Address.city, user_name: name, password: "abc123", wallet: 100, favorite_baby: random_baby)
 end
 
     50.times do

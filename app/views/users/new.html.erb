@@ -26,9 +26,7 @@
 <br>
 <%= f.label :location %>
 <%= f.text_field :location %>
-<br>
-Favorite Beanie Baby
-<%= f.collection_select(:favorite_baby, @babies, :name, :name ) %>
+
 <br>
 <%= f.submit %>
 <% end %>

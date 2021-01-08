@@ -33,6 +33,10 @@ class UsersController < ApplicationController
         @pending_trades_offered = @user_pending_trades_offered.where(status: "pending")
         @user_pending_trades_received = Trade.where(d_ownership_id: @user.ownerships.ids)
         @pending_trades_recieved = @user_pending_trades_received.where(status: "pending")
+        mutual_trades1 = Trade.where(g_ownership_id: @user.id, d_ownership_id: @current_user.id, status: "completed")
+        mutual_trades2 = Trade.where(d_ownership_id: @user.id, g_ownership_id: @current_user.id, status: "completed")
+        @mutual_trades = mutual_trades1 + mutual_trades2
+        @fav_baby = @user.favorite_baby
     end
 
     def add_funds
@@ -64,6 +68,8 @@ class UsersController < ApplicationController
             redirect_to login_path
         end
     end
+
+
 
     def logout
         session[:current_user_id] = nil

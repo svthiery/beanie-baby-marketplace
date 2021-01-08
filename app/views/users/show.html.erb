@@ -8,7 +8,6 @@
         <p>Username: <%= @user.user_name %></p>
         <p>Age: <%= @user.age %></p>
         <p>Location: <%= @user.location %></p>
-        <p>Favorite baby: <%= @user.favorite_baby %></p>
     </div>
 
     <div class="wallet-info" class="user-grid-item">
@@ -17,6 +16,10 @@
         <p>Click <%= link_to 'here', add_funds_path %> if you would like to add funds to your wallet.</p>
         <br>
         <p><%= link_to 'Add Beanie Baby', new_ownership_path %><p>
+        <% else %>
+        <% @mutual_trades.each do |mt|%>
+        <p> <%=  %> </p>
+        <% end%>
         <% end%>
     </div>
 
