@@ -22,16 +22,17 @@ class OwnershipsController < ApplicationController
         @ownership = Ownership.find(params[:id])
     end
 
-    def purchase
+    def edit
         @ownership = Ownership.find(params[:id])
     end
 
     def update
         ownership = Ownership.find(params[:id])
-        ownership.user.update(wallet: user.wallet += ownership.purchase_price)
+        seller = User.find(ownership.user_id)
+        seller.update(wallet: seller.wallet += ownership.purchase_price)
         buyer = @current_user
         buyer.update(wallet: buyer.wallet -= ownership.purchase_price)
-        ownership.update(user: buyer)
+        ownership.update(user_id: buyer.id)
         redirect_to user_path(buyer)
     end
 
