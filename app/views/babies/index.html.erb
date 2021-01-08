@@ -1,5 +1,3 @@
-<h1>Behold the babies!</h1>
-
 
 <div class="grid-container">
     <% @babies.each do |b| %>
@@ -8,7 +6,8 @@
         <a href="<%= baby_path(b) %>"><img class= "babyindeximg" src=<%= b.img_url %>></a>
     <p><b>List of sellers with this Beanie Baby:</b></p>
     <br>
-        <% b.users.each do |u| %>
+    <% unique_users = b.users.uniq%>
+        <% unique_users.each do |u| %>
             <p><%= link_to u.name, user_path(u) %> </p>
             <br>
         <% end %>

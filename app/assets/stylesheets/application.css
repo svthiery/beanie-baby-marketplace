@@ -51,6 +51,23 @@ ul {
   list-style-type: none;
 }
 
+#poem {
+  background-color: rgb(39, 39, 155);
+  color: rgb(49, 11, 11);
+  text-align: justify;
+  vertical-align: middle;
+  font-size: 28px;
+  line-height: 1.5;
+  background-color:  #ffcce6;
+  text-background-color:  #ffcce6;
+  height: 200px;
+  width: 400px;
+  padding: 15px;
+  border-radius: 25px;
+  position: absolute;
+  right: 0px;
+  top: 500px;
+}
 
 #navbar ul {
     list-style-type: none;
@@ -152,12 +169,17 @@ ul {
 }
 
 .baby-show-box {
+  font-size: 25px;
   text-align: center;
   background-color:  #ffcce6;
   text-background-color:  #ffcce6;
   width: 400px;
+  height: 200px;
+  line-height: 1.5;
   padding: 15px;
   border-radius: 25px;
+  position: absolute;
+  top: 500px;
 }
 
 .user-show-img {
