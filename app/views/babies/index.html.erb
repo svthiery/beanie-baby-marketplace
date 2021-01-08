@@ -1,19 +1,15 @@
-
-
 <h1>Behold the babies!</h1>
 
-<ul>
-<% @babies.each do |b| %>
-<li><img class= "babyindeximg" src=<%= b.img_url %>>
-<%=link_to b.name, baby_path(b) %></li>
-
-
-<br>
-<h1>List of sellers with this Beanie Baby:</h1>
-<br>
-<% b.users.each do |u| %>
-<p><%= link_to u.name, user_path(u) %> </p>
-<br>
-<% end %>
-<% end %>
-</ul>
+<div class="grid-container">
+    <div class="grid-child"><% @babies.each do |b| %>
+        <h2 class="babyindexname"><%=link_to b.name, baby_path(b) %></h2>
+        <a href="<%= baby_path(b) %>"><img class= "babyindeximg" src=<%= b.img_url %>></a>
+    <p><b>List of sellers with this Beanie Baby:</b></p>
+    <br>
+        <% b.users.each do |u| %>
+            <p><%= link_to u.name, user_path(u) %> </p>
+            <br>
+        <% end %>
+    <% end %>
+    </div>
+</div>

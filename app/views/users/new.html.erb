@@ -1,6 +1,6 @@
 <h1>Register as a user here!</h1>
 
-
+<div>
 <% if !flash[:errors].nil? %>
  <%    flash[:errors].each do |error| %>
     <%= error %>
@@ -32,3 +32,4 @@ Favorite Beanie Baby
 <br>
 <%= f.submit %>
 <% end %>
+</div>

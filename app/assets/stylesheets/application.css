@@ -18,20 +18,23 @@
 * {background-color: white;
   border-color: black;
 }
-a {color:red;
-  font-family: 'Gaegu', cursive;
-}
 
-p { color:red;
-  font-family: 'Gaegu', cursive;
+
+p { color:black;
+  font-family: Garamond, serif;
     border-color: black;
 }
-h1 {color: red;
-  font-family: 'Gaegu';
+
+h1 {color: black;
+  font-family: 'Gaegu', cursive;
 }
 div { color: red;
-  font-family: 'Gaegu', cursive;
+  font-family: Garamond, serif;
   border-color: black;
+}
+a:link {
+  text-decoration: none;
+  color: red;
 }
 
 
@@ -45,32 +48,43 @@ div { color: red;
     height: 130px;
   }
   
-  #navbar li {
+#navbar li {
     float: left;
   }
   
-  #navbar li a {
+#navbar li a {
     display: block;
     color: white;
     background-color: #ffcce6;
     text-align: center;
-    padding: 14px 16px;
-    justify-content: space-evenly;
-    align-items: center;
+    padding: 24px;
     text-decoration: none;
-    font-family: Garamond, serif;
+    font-family: 'Gaegu', cursive;
     font-size: 60px;
-   
+    margin: auto;
   }
 
-  #logo {
+#logo {
     background-color: #ffcce6;
     padding: 5px;
     width: 120px;
  
   }
 
-  .babyindeximg {
+.babyindeximg {
     padding: 5px;
-    width: 100px;
+    width: 200px;
   }
+
+.babyindexname {
+  color: black;
+  font-family: 'Gaegu', cursive;
+  text-decoration: none;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
