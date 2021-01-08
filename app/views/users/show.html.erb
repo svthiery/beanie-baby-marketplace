@@ -19,9 +19,14 @@
         <br>
         <p><%= link_to 'Add Beanie Baby', new_ownership_path %><p>
         <% else %>
-        <% @mutual_trades.each do |mt|%>
-        <p> <%=  %> </p>
-        <% end%>
+        <p>Number of trades completed: <%= @user_trades.length %></p>
+        <br>
+        <p><%= @user.name %>'s last trade:</p>
+        <p> <%= @last_trade.d_ownership.user.name  %> traded <%= @last_trade.d_ownership.baby.name %> for <%= @last_trade.g_ownership.user.name %>'s
+        <%= @last_trade.g_ownership.baby.name %>
+          </p>
+
+        
         <% end%>
     </div>
 

@@ -82,7 +82,7 @@ He wants to have some Halloween fun!', img_url: 'https://beaniepedia.com/beanies
 
 5.times do 
     random_baby = Baby.all.shuffle.first
-    name = Faker::Name.name
+    name = Faker::Name.middle_name
     User.create(name: name, age: rand(30),location: Faker::Address.city, user_name: name, password: "abc123", wallet: 100, favorite_baby: random_baby)
 end
 
@@ -92,6 +92,8 @@ end
 end
 gabe = 'Gabe'
 User.create(name: gabe, age:29, location: 'Boogie Down', user_name: gabe, password: 'abc123', wallet: 500)
-
+sarah = 'Sarah'
+gabe = 'Gabe'
+User.create(name: sarah, age:30, location: 'King\'s County', user_name: sarah, password: 'abc123', wallet: 1000)
 
 puts "Seeding Complete"
