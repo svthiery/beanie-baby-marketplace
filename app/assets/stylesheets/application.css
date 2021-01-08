@@ -40,6 +40,7 @@ div { color: red;
 
 ul {
   list-style-type: none;
+  padding: 0;
 }
 
 #poem {
@@ -173,7 +174,7 @@ color: white;
   border-radius: 25px;
 }
 
-.user-info-box p {
+.user-info-box p, .user-info-box h3 {
   background-color:  #ffcce6;
 }
 
@@ -185,7 +186,7 @@ color: white;
   border-radius: 25px;
 }
 
-.wallet-info p, .wallet-info a, .pending-trades-box p, .pending-trades-box a, .pending-trades-box h3, .baby-show-box p {
+.wallet-info p, .wallet-info a, .wallet-info h3, .pending-trades-box p, .pending-trades-box a, .pending-trades-box h3, .baby-show-box p {
   background-color:  #ffcce6;
 }
 
@@ -196,6 +197,10 @@ color: white;
   width: 400px;
   padding: 15px;
   border-radius: 25px;
+}
+
+.pending-trades-box li {
+  background-color:  #ffcce6;
 }
 
 .user-grid {
@@ -259,4 +264,43 @@ color: white;
 #user-name {
   background-color: red;
   color: white;
+  margin: 0;
+  font-size: 35px;
+}
+
+#baby-ownership-page {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
+#baby-ownership-page img {
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#baby-ownership-page p {
+  text-align: center;
+}
+
+#login-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+#trade-show-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+}
+
+#register-div {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
 }

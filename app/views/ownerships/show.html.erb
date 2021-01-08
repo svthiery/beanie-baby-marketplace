@@ -1,21 +1,20 @@
 <h1><%= @ownership.user.name %>'s <%= @ownership.baby.name %></h1>
-<div>
+<div id="baby-ownership-page">
 <img src=<%= @ownership.baby.img_url %>>
 <br>
-Condition: <%= @ownership.condition %>
-<br>
-Purchase Price: $<%= @ownership.purchase_price %>
+<p>Condition: <%= @ownership.condition %></p>
+<p>Purchase Price: $<%= @ownership.purchase_price %></p>
 <br>
 
 
 <% if @ownership.user != @current_user%>
-<p><%= link_to 'Trade for this baby', noo_trade_path  %></p>
-<br>
-<% if @current_user.wallet < @ownership.purchase_price%>
-<p>You do not have enough money to buy this beanie baby.</p>
-<% else %>
-<p class = "link"><%= link_to 'Purchase this Baby', purchase_path %></P>
-<% end%>
+    <p><%= link_to 'Trade for this baby', noo_trade_path  %></p>
+    <br>
+    <% if @current_user.wallet < @ownership.purchase_price%>
+        <p>You do not have enough money to buy this beanie baby.</p>
+    <% else %>
+        <p class = "link"><%= link_to 'Purchase this Baby', purchase_path %></P>
+    <% end%>
 <% end%>
 
 </div>
