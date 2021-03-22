@@ -1,7 +1,15 @@
-# README
+# Beanie Baby Marketplace
 
 This README would normally document whatever steps are necessary to get the
 application up and running.
+
+To run:
+ruby-2.6.1
+
+Bundle install
+rails db:migrate
+rails db:seed
+rails s
 
 Things you may want to cover:
 
