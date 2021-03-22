@@ -2,7 +2,7 @@
 
 The Beanie Baby Marketplace is a Ruby on Rails web application that allows users to display their beanie baby collections and trade beanies with other users.
 
-Created in collaboration with Gabe Chazanov.
+Created in collaboration with [Gabe Chazanov](https://github.com/gabechaz).
 
 Ruby-2.6.1
 
