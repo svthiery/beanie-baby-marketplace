@@ -27,8 +27,10 @@ To launch this applications, please follow the steps below:
 ## Features
 
 A user can log in, and username and password with be validated.
+
 ![Log In](https://user-images.githubusercontent.com/70274658/112049781-756c9300-8b26-11eb-8691-b74e384ce433.gif)
 
 
 A user can view their own profile. They will see user info, amount of money in their wallet, pending trades proposed by the user, pending trades offered to the user, and a list of beanie babies in the user's collection.  
+
 ![General_profile](https://user-images.githubusercontent.com/70274658/112049914-9d5bf680-8b26-11eb-9471-54109399808b.gif)
