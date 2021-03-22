@@ -21,12 +21,12 @@
         <% else %>
         <p>Number of trades completed: <%= @user_trades.length %></p>
         <br>
+        <%  if @last_trade  %>
         <p><%= @user.name %>'s last trade:</p>
         <p> <%= @last_trade.d_ownership.user.name  %> traded <%= @last_trade.d_ownership.baby.name %> for <%= @last_trade.g_ownership.user.name %>'s
         <%= @last_trade.g_ownership.baby.name %>
           </p>
-
-        
+        <% end %>
         <% end%>
     </div>
 
