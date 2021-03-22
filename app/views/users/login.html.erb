@@ -3,7 +3,11 @@
     <% if @error %>
         <p><%= @error %></p>
     <% end %>
-
+<div>
+<p>If you'd like to explore without registering, please log in with the following credentials:</p>
+    <p>Username: Claude</p>
+    <p>Password: beanie</p>
+    </div>
     <%= form_tag '/post_login' do %>
         <%= label_tag :user_name %>
         <%= text_field_tag :user_name %>
