@@ -1,0 +1,8 @@
+<h1>Would you like to purchase <%= @ownership.user.name %>'s <%= @ownership.name %> for $<%= @ownership.purchase_price %>? </h1>
+<br>
+<img src=<%= @ownership.baby.img_url %>>
+
+<h3><%= @ownership.name %></h3>
+<br>
+<p class ="link"> <%= link_to 'Yes!', ex_purchase_path, method: :patch %></p>
+<p class = "link"> <%= link_to 'No!', ownership_path(@ownership) %></p>

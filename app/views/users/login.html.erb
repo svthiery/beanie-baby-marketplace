@@ -1,0 +1,20 @@
+<h1>Log In</h1>
+<div id="login-div">
+    <% if @error %>
+        <p><%= @error %></p>
+    <% end %>
+
+    <%= form_tag '/post_login' do %>
+        <%= label_tag :user_name %>
+        <%= text_field_tag :user_name %>
+        <br>
+        <br>
+        <%= label_tag :password %>
+        <%= password_field_tag :password %>
+        <br>
+        <br>
+        <%= submit_tag 'Log In' %>
+    <% end %>
+    <br>
+    If you do not have an account, please register <p class = "link"> <%= link_to 'here', new_user_path %> </p>
+</div>

@@ -4,12 +4,43 @@
     <title>BeanieBabyMarketplace</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu:wght@700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
+
+  <% if check_login? %>
+  <div id="navbar">
+    <ul>
+      <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
+      <li><a href=<%= home_path %>>Home</a></li>
+      <li><a href=<%= user_path(@current_user) %>>Profile</a></li>
+      <li><a href=<%= babies_path %>>Beanie Babies</a></li>
+      <li><a href=<%= users_path %>>Marketplace</a></li>
+      <p>Logged in as <%= @current_user.name %></p>
+    </ul>
+</div>
+
+  <br>
+  <%= button_to 'Log Out', logout_path, method: :delete %>
+  <% else %>
+    <div id="navbar">
+      <ul>
+        <li><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Ty_Company_Logo.png" id="logo"></li>
+        <li><a href=<%= home_path %>>Home</a></li>
+        <li><a href=<%= babies_path %>>Beanie Babies</a></li>
+        <li><a href=<%= users_path %>>Marketplace</a></li>
+      </ul>
+    </div>
+<%   end %>
+<br>
+  
+  
     <%= yield %>
   </body>
 </html>

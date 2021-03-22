@@ -1,10 +1,62 @@
-<h1><%= @user.name %></h1>
+<div class="user-container">
+  <img src="https://findthatlogo.com/wp-content/gallery/logos-of-the-heart/ty-heart.gif" alt="Heart" style="width:25%;">
+  <div class="user-name-centered"><h1 id="user-name"><%= @user.name %></h1></div>
+</div>
 
-<p>Username: <%= @user.user_name %></p>
-<p>Age: <%= @user.age %></p>
-<p>Location: <%= @user.location %></p>
-<p>Favorite baby: <%= @user.favorite_baby %></p>
-<p>All babies: <% @user.babies.each do |baby| %></p>
-<%= baby.name %>
-<% end %>
+<div class="user-grid">
+    <div class="user-info-box" class="user-grid-item">
+    <p><h3>USER INFO</h3></p>
+        <p>Username: <%= @user.user_name %></p>
+        <p>Age: <%= @user.age %></p>
+        <p>Location: <%= @user.location %></p>
+    </div>
 
+    <div class="wallet-info" class="user-grid-item">
+        <% if @current_user == @user %>
+        <p><h3>WALLET</h3></p>
+            <p>You currently have $<%= @user.wallet %> in your wallet.</p>
+        <p>Click <%= link_to 'here', add_funds_path %> if you would like to add funds to your wallet.</p>
+        <br>
+        <p><%= link_to 'Add Beanie Baby', new_ownership_path %><p>
+        <% else %>
+        <p>Number of trades completed: <%= @user_trades.length %></p>
+        <br>
+        <p><%= @user.name %>'s last trade:</p>
+        <p> <%= @last_trade.d_ownership.user.name  %> traded <%= @last_trade.d_ownership.baby.name %> for <%= @last_trade.g_ownership.user.name %>'s
+        <%= @last_trade.g_ownership.baby.name %>
+          </p>
+
+        
+        <% end%>
+    </div>
+
+    <div class="pending-trades-box" class="user-grid-item">
+    <p><h3>PENDING TRADES PROPOSED BY USER</h3></p>
+    <ul><% @pending_trades_offered.each do |trade| %>
+    <li>Wants <%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %> from <%= link_to trade.d_ownership.user.name, user_path(trade.d_ownership.user) %></li>
+    <% end %>
+    </ul>
+    </div>
+
+    <div class="pending-trades-box" class="user-grid-item">
+    <p><h3>PENDING TRADES FOR USER TO CONFIRM</h3></p>
+    <ul><% @pending_trades_recieved.each do |trade| %>
+    <li><%= trade.g_ownership.user.name %> wants <span class="link"><%= link_to trade.d_ownership.baby.name, confirm_trade_path(trade) %></span></li>
+    <% end %>
+    </ul>
+    </div>
+</div>
+
+<h1> Listings </h1>
+<div class="grid-container">
+    <% @user.ownerships.each do |ownership| %>
+    <div class="grid-child"><p><%= ownership.baby.name %></p>
+        <img class= "user-show-img" src=<%= ownership.baby.img_url %>>
+        <br>
+    <p class="link"><%= link_to 'See Listing', ownership_path(ownership) %></p>
+    </div>
+    <% end %>
+ </div>
+
+
+<br>

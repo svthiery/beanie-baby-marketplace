@@ -1,0 +1,16 @@
+<h1>Trade Confirmation</h1>
+<%# enact methods here to crud on the associated ownerships and change their user_id %>
+<div id=trade-show-div> 
+    <p><b><%= @self_ownership.user.name %> has requested to trade</b></p>
+    <p><%= @self_ownership.baby.name %></p>
+    <p><b>with <%= @foreign_ownership.user.name %> for their</b></p>
+    <p><%= @foreign_ownership.baby.name %></p>
+    <br>
+    <br>
+    <% if @trade.d_ownership.user.id == @current_user.id %> 
+    <p><%= button_to 'Confirm Trade', confirm_trade_path %></p>
+    <% end %>
+    <% if @trade.d_ownership.user.id == @current_user.id || @trade.g_ownership.user.id == @current_user.id %>
+    <p><%= button_to 'Cancel Trade', cancel_trade_path, method: :patch %></p>
+    <% end %>
+</div>

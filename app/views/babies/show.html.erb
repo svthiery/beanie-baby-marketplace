@@ -1,9 +1,16 @@
 <h1><%= @baby.name %></h1>
-<img src=<%= @baby.img_url %>>
-<ul>
-<li><%= @baby.release_year %></li>
-<li><%= @baby.species %></li>
-<li>$<%= @baby.msrp %></li>
-</ul>
+<img class="baby-show-img" src=<%= @baby.img_url %>>
 
-<blockquote><%= @baby.poem %></blockquote>
+<div class="baby-show-box">
+<p>Release year: <%= @baby.release_year %></p>
+<p>Species: <%= @baby.species %></p>
+<p>MSRP $<%= @baby.msrp %></p>
+</div>
+
+
+
+
+
+<div id="poem">
+<%= @baby.poem %>
+</div>

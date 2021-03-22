@@ -1,10 +1,19 @@
 <h1>Add New Beanie Baby to Collection</h1>
 
 <%= form_for @ownership do |f| %>
-<%= f.label "Owner name" %>
-<%= f.collection_select(:user_id, User.all, :id, :name) %>
 
+<div>
 <%= f.label "Beanie Baby" %>
 <%= f.collection_select(:baby_id, Baby.all, :id, :name) %>
-<%= f.submit %>
+<br>
+<%= f.label :condition %>
+<%= f.text_field :condition %>
+<br>
+<%= f.label :purchase_price %>
+<%= f.number_field :purchase_price %>
+<br>
+<%= f.submit 'Add Beanie Baby to Collection' %>
+
+
 <% end %>
+</div>

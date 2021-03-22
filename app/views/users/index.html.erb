@@ -1,8 +1,14 @@
-<h1>All Users</h1>
+<h1>All Collectors</h1>
+<div>
 
 <ul>
 <% @users.each do |user| %>
-    <li><b><%= link_to user.user_name, user_path(user) %></b><br>
-    <%= user.name %></li>
+    <li class ="link"><%= link_to user.user_name, user_path(user) %><br>
+    <%= user.name %>
+    <br>
+    Beanie Baby Collection size: <%= user.ownerships.length %>
+    </li>
+    <br>
 <% end %>
 </ul>
+</div>

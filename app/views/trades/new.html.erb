@@ -1,0 +1,7 @@
+<h1>Trade a Beanie Baby for <%= @desired_baby.name %></h1>
+<div>
+<%= form_for :trade do |f| %>
+<%= f.collection_select(:g_ownership_id, @babies, :id, :name ) %>
+<%= f.submit "Propose Trade" %>
+<% end %>
+</div>

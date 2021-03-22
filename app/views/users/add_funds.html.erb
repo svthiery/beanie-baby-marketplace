@@ -1,0 +1,7 @@
+<h1>Add funds to your wallet here</h1>
+<div>
+<%= form_with model: @user, method: "patch" do |f| %>
+<%= f.number_field :wallet %>
+<%= f.submit 'Add Funds' %>
+<% end %>
+</div>
