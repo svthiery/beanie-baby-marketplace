@@ -1,32 +1,29 @@
 # Beanie Baby Marketplace
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The Beanie Baby Marketplace is a Ruby on Rails web application that allows users to display their beanie baby collections and trade beanies with other users.
 
-To run:
-ruby-2.6.1
+Created in collaboration with Gabe Chazanov.
 
-Bundle install
-rails db:migrate
-rails db:seed
-rails s
+Ruby-2.6.1
 
-Things you may want to cover:
+## Instructions
 
-* Ruby version
+To launch this applications, please follow the steps below:
 
-* System dependencies
+-- Clone this repo in your computer's terminal.
 
-* Configuration
+-- Open repo in your text editor.
 
-* Database creation
+-- In your terminal, run `bundle install` to install the required dependencies.
 
-* Database initialization
+-- Run `rails db:create` to create a local database.
 
-* How to run the test suite
+-- Run `rails db:migrate` to add tables to the database.
 
-* Services (job queues, cache servers, search engines, etc.)
+-- Run `rails db:seed` to seed the database.
 
-* Deployment instructions
+-- Run `rails s` to run the local server.
 
-* ...
+## Features
+
+
