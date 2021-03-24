@@ -8,7 +8,7 @@ Ruby-2.6.1
 
 ## Instructions
 
-To launch this applications, please follow the steps below:
+To launch this application, please follow the steps below:
 
 -- Clone this repo in your computer's terminal.
 
