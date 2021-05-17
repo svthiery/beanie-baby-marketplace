@@ -26,7 +26,7 @@ To launch this application, please follow the steps below:
 
 ## Features
 
-A user can log in, and username and password with be validated.
+A user can log in, and username and password will be validated.
 
 ![Log In](https://user-images.githubusercontent.com/70274658/112049781-756c9300-8b26-11eb-8691-b74e384ce433.gif)
 
